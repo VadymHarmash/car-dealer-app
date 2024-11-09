@@ -1,13 +1,14 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import { IVehicleMake } from "@/app/interfaces/IVehicleMake.interface";
 import VehicleMakesService from "@/app/services/VehicleMakesService";
+import {IVehicleInfo} from "@/app/interfaces/IVehicleInfo.interface";
 
 export class VehicleStore {
   vehicleMakes: IVehicleMake[] = [];
   vehicleMakeId: number | null = null;
   vehicleMakeName: string = "";
   vehicleModelYear: number | null = null;
-  vehicleInfo: any;
+  vehicleInfo: IVehicleInfo = {} as IVehicleInfo;
 
   constructor() {
     makeAutoObservable(this);

@@ -1,0 +1,90 @@
+$background-color: #1a1a1a;
+$primary-text-color: #f1f1f1;
+$input-background-color: #333;
+$input-text-color: #fff;
+$border-color: #444;
+$button-hover-color: #555;
+$label-color: #aaa;
+$dropdown-hover-color: #666;
+$blue-color: #007bff;
+$blue-hover-color: #0056b3;
+
+.result {
+  background-color: $background-color;
+  color: $primary-text-color;
+  min-height: 100vh;
+  padding: 20px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    background-color: $input-background-color;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $primary-text-color;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: $label-color;
+  }
+
+  &__models {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+
+  &__model {
+    background-color: $input-background-color;
+    color: $primary-text-color;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: $primary-text-color;
+    }
+
+    p {
+      font-size: 14px;
+      color: $label-color;
+    }
+  }
+
+  .no-vehicle-info {
+    color: $label-color;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
