@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./filterPage.module.scss";
 import MakesDropdown from "@/app/components/makesDropdown";
 import YearsDropdown from "@/app/components/yearsDropdown";
+import NextButton from "@/app/components/NextButton";
 
 const FilterPage = () => {
   return (
@@ -12,9 +13,7 @@ const FilterPage = () => {
         <div className={styles.filterPage__wrapper}>
           <MakesDropdown />
           <YearsDropdown />
-          <button className={styles.filterPage__button}>
-            Next
-          </button>
+          <NextButton />
         </div>
       </div>
     </div>
