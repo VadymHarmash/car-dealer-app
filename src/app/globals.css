@@ -1,0 +1,56 @@
+:root {
+  --font-geist-sans: "GeistSans", sans-serif;
+  --font-geist-mono: "GeistMono", monospace;
+}
+
+body {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+code,
+pre {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}

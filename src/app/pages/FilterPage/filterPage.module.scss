@@ -1,0 +1,94 @@
+$background-color: #1a1a1a;
+$primary-text-color: #f1f1f1;
+$input-background-color: #333;
+$input-text-color: #fff;
+$border-color: #444;
+$button-hover-color: #555;
+$label-color: #aaa;
+$dropdown-hover-color: #666;
+$blue-color: #007bff;
+$blue-hover-color: #0056b3;
+
+.filterPage {
+  background-color: $background-color;
+  color: $primary-text-color;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    background-color: $input-background-color;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__label {
+    color: $label-color;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  &__dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: $input-background-color;
+    color: $input-text-color;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $button-hover-color;
+      background-color: #444;
+    }
+
+    &__option {
+      background-color: $input-background-color;
+      color: $primary-text-color;
+      padding: 8px 12px;
+      font-size: 14px;
+      &:hover {
+        background-color: $dropdown-hover-color;
+      }
+    }
+
+    &:hover {
+      background-color: $dropdown-hover-color;
+    }
+
+  }
+  &__button {
+    background-color: $blue-color;
+    color: $primary-text-color;
+    padding: 12px 20px;
+    margin-top: 24px;
+    width: 40%;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $blue-hover-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: darken($blue-color, 10%);
+    }
+  }
+}
