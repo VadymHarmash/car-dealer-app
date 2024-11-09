@@ -7,6 +7,7 @@ export class VehicleStore {
   vehicleMakeId: number | null = null;
   vehicleMakeName: string = "";
   vehicleModelYear: number | null = null;
+  vehicleInfo: any;
 
   constructor() {
     makeAutoObservable(this);
@@ -34,8 +35,19 @@ export class VehicleStore {
 
   updateMakeIdByName() {
     const selectedMake = this.vehicleMakes.find(
-      (make) => make.MakeName === this.vehicleMakeName
+      (make) => make.MakeName === this.vehicleMakeName,
     );
     this.vehicleMakeId = selectedMake ? selectedMake.MakeId : null;
+  }
+
+  async fetchVehicleInfo(makeId: string, year: string) {
+    try {
+      const response = await VehicleMakesService.getVehicleInfo(makeId, year);
+      runInAction(() => {
+        this.vehicleInfo = response.data.Results;
+      });
+    } catch (error) {
+      console.error("Failed to fetch vehicle information:", error);
+    }
   }
 }
