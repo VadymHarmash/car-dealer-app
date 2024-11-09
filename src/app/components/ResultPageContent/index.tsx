@@ -1,6 +1,7 @@
 import React from "react";
 import { IVehicleInfo } from "@/app/interfaces/IVehicleInfo.interface";
 import styles from "./result.module.scss";
+import Link from "next/link";
 
 interface Props {
   vehicleInfo: IVehicleInfo[];
@@ -10,6 +11,7 @@ interface Props {
 const ResultPageContent = ({ vehicleInfo, year }: Props) => {
   return (
     <div className={styles.result}>
+      <Link href={'/'} className={styles.result__goBack}>Go Back</Link>
       <div className="container">
         <div className={styles.result__wrapper}>
           <h1>Vehicle Details</h1>

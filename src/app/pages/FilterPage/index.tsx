@@ -2,8 +2,8 @@
 
 import React, { Suspense } from "react";
 import styles from "./filterPage.module.scss";
-import MakesDropdown from "@/app/components/makesDropdown";
-import YearsDropdown from "@/app/components/yearsDropdown";
+import MakesDropdown from "../../components/MakesDropdown";
+import YearsDropdown from "../../components/YearsDropdown";
 import NextButton from "@/app/components/NextButton";
 
 const FilterPage = () => {

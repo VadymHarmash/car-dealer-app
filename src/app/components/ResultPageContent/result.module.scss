@@ -8,12 +8,24 @@ $label-color: #aaa;
 $dropdown-hover-color: #666;
 $blue-color: #007bff;
 $blue-hover-color: #0056b3;
+$go-back-bg-color: rgba(122, 114, 114, 0.64);
 
 .result {
   background-color: $background-color;
   color: $primary-text-color;
   min-height: 100vh;
   padding: 20px;
+
+  &__goBack{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 6px 12px;
+    background-color: $go-back-bg-color;
+    color: $primary-text-color;
+    text-decoration: none;
+  }
 
   .container {
     display: flex;
